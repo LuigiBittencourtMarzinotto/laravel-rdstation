@@ -1,5 +1,5 @@
 <?php
 
-use VendorName\Skeleton\Tests\TestCase;
+use LuigiBittencourtMarzinotto\RDStation\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);
