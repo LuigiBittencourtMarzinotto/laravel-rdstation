@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ConnectedAccount extends Model
 {
-    protected $table = "rd_connected_accounts";
+    protected $table = 'rd_connected_accounts';
 
     public $timestamps = true;
 
@@ -19,6 +19,6 @@ class ConnectedAccount extends Model
         'token_type',
         'scope',
         'created_at',
-        'updated_at'
+        'updated_at',
     ];
 }
