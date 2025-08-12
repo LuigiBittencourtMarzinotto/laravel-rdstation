@@ -18,7 +18,6 @@ class RDStationServiceProvider extends PackageServiceProvider
         $package
             ->name('rdstation')
             ->hasConfigFile()
-            ->hasMigration('create_rdstation_table')
             ->hasCommand(RDStationCommand::class);
     }
 }

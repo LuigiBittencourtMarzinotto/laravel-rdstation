@@ -1,5 +1,6 @@
 {
     "name": "luigibittencourtmarzinotto/rdstation",
+    "type": "library",
     "description": "Integração para Laravel 12 com a RD Station: OAuth2, upsert de contatos, negócios (deals), eventos e webhooks, com refresh automático de token, retries e idempotência.",
     "keywords": [
         "Luigi Bittencourt Marzinotto",
