@@ -25,29 +25,29 @@ final readonly class AddressDTO implements Arrayable
         $a ??= [];
 
         return new self(
-            country:    $a['country']    ?? null,
-            state:      $a['state']      ?? null,
-            city:       $a['city']       ?? null,
-            district:   $a['district']   ?? null,
-            street:     $a['street']     ?? null,
-            number:     $a['number']     ?? null,
+            country: $a['country'] ?? null,
+            state: $a['state'] ?? null,
+            city: $a['city'] ?? null,
+            district: $a['district'] ?? null,
+            street: $a['street'] ?? null,
+            number: $a['number'] ?? null,
             complement: $a['complement'] ?? null,
-            zip_code:   self::onlyDigits($a['zip_code'] ?? null),
+            zip_code: self::onlyDigits($a['zip_code'] ?? null),
         );
     }
 
     public function toArray(): array
     {
         return Arr::where([
-            'country'   => $this->country,
-            'state'     => $this->state,
-            'city'      => $this->city,
-            'district'  => $this->district,
-            'street'    => $this->street,
-            'number'    => $this->number,
-            'complement'=> $this->complement,
-            'zip_code'  => $this->zip_code,
-        ], fn($v) => $v !== null);
+            'country' => $this->country,
+            'state' => $this->state,
+            'city' => $this->city,
+            'district' => $this->district,
+            'street' => $this->street,
+            'number' => $this->number,
+            'complement' => $this->complement,
+            'zip_code' => $this->zip_code,
+        ], fn ($v) => $v !== null);
     }
 
     private static function onlyDigits(?string $v): ?string

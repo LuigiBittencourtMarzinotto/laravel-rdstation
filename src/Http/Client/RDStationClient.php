@@ -2,8 +2,8 @@
 
 namespace LuigiMarzinotto\LaravelRDStation\Http\Client;
 
-use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Client\PendingRequest;
+use Illuminate\Support\Facades\Http;
 
 class RDStationClient
 {
@@ -18,12 +18,11 @@ class RDStationClient
             ->retry(
                 $cfg['http']['retries']['max'],
                 $cfg['http']['retries']['base_ms'],
-                fn($e) => in_array(optional($e->response())->status(), $cfg['http']['retries']['retry_on_codes']),
+                fn ($e) => in_array(optional($e->response())->status(), $cfg['http']['retries']['retry_on_codes']),
                 throw: false
             );
 
-
-        $token  = (string) ($cfg['auth']['token'] ?? '');
+        $token = (string) ($cfg['auth']['token'] ?? '');
         $header = (string) ($cfg['auth']['header'] ?? 'Authorization');
         $prefix = (string) ($cfg['auth']['prefix'] ?? 'Bearer ');
 
