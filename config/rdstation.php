@@ -1,6 +1,5 @@
 <?php
 
-use LuigiBittencourtMarzinotto\RDStation\Models\ConnectedAccount;
 
 return [
     'http' => [

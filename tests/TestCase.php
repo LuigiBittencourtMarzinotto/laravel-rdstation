@@ -3,8 +3,8 @@
 namespace LuigiBittencourtMarzinotto\RDStation\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Orchestra\Testbench\TestCase as Orchestra;
 use LuigiBittencourtMarzinotto\RDStation\RDStationServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {

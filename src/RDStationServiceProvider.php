@@ -2,9 +2,9 @@
 
 namespace LuigiBittencourtMarzinotto\RDStation;
 
+use LuigiBittencourtMarzinotto\RDStation\Commands\RDStationCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use LuigiBittencourtMarzinotto\RDStation\Commands\RDStationCommand;
 
 class RDStationServiceProvider extends PackageServiceProvider
 {

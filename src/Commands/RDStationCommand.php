@@ -3,14 +3,12 @@
 namespace LuigiBittencourtMarzinotto\RDStation\Commands;
 
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\Artisan;
 
 class RDStationCommand extends Command
 {
     public $signature = 'rdstation';
 
     protected $description = 'Configures and (optionally) populates initial data for the RD Station integration';
-
 
     public function handle(): int
     {
@@ -21,17 +19,18 @@ class RDStationCommand extends Command
 
         if (! $this->confirm("Confirm creation/update for {$email}?")) {
             $this->warn('Operation canceled.');
+
             return self::SUCCESS;
         }
         $model = config('rdstation.models.connected_account');
         $model::updateOrCreate(
             ['email' => $email],
             [
-                'account_id'    => $accountId,
-                'access_token'  => $tokenInicial ?: 'placeholder',
+                'account_id' => $accountId,
+                'access_token' => $tokenInicial ?: 'placeholder',
                 'refresh_token' => null,
-                'expires_at'    => now()->addHour(),
-                'scopes'        => ['contacts', 'deals'],
+                'expires_at' => now()->addHour(),
+                'scopes' => ['contacts', 'deals'],
             ],
         );
 
